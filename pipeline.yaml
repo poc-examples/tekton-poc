@@ -23,6 +23,7 @@ spec:
           value: 'true'
       taskRef:
         kind: Task
+        resolver: bundles
         name: git-clone
       workspaces:
       - name: output
