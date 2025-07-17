@@ -21,14 +21,20 @@ spec:
             value: $(tt.params.gitrevision)
           - name: GITHUB_REPO
             value: https://github.com/poc-examples/tekton-poc.git
-        # podTemplate:
-        #   securityContext:
-        #     runAsUser: 1000
-        #     fsGroup: 1000
-        #     fsGroupChangePolicy: "OnRootMismatch"
+        podTemplate:
+          securityContext:
+            runAsUser: 1000
+            fsGroup: 65532
+            fsGroupChangePolicy: "OnRootMismatch"
         workspaces:
         - name: source
-          emptyDir: {}
+          volumeClaimTemplate:
+            spec:
+              accessModes:
+                - ReadWriteOnce
+              resources:
+                requests:
+                  storage: 1Gi
 ---
 apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
