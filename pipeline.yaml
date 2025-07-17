@@ -5,6 +5,7 @@ metadata:
 spec:
   params:
     - name: IMAGE_TAG
+    - name: GITHUB_REPO
   workspaces:
     - name: source
   tasks:
