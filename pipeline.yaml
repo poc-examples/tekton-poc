@@ -15,11 +15,11 @@ spec:
       params:
         - name: URL
           value: $(params.GITHUB_REPO)
-        - name: revision
+        - name: REVISION
           value: main
-        - name: sslVerify
+        - name: SSL_VERIFY
           value: 'false'
-        - name: noProxy
+        - name: NO_PROXY
           value: 'true'
       taskRef:
         resolver: cluster 
