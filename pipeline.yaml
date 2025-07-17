@@ -13,7 +13,7 @@ spec:
   tasks:
     - name: git-clone
       params:
-        - name: url
+        - name: URL
           value: $(params.GITHUB_REPO)
         - name: revision
           value: main
