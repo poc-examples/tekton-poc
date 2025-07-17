@@ -21,8 +21,6 @@ spec:
           value: 'false'
         - name: NO_PROXY
           value: 'true'
-        - name: SUBDIRECTORY
-          value: src
       taskRef:
         resolver: cluster 
         params:
