@@ -45,12 +45,12 @@ spec:
     - name: filter-events
       interceptors:
         - ref:
-            name: "gitlab"
+            name: "github"
             kind: ClusterInterceptor
             apiVersion: triggers.tekton.dev
           params:
             - name: "eventTypes"
-              value: ["Push Hook"]
+              value: ["push"]
         - ref:
             kind: ClusterInterceptor
             name: cel
@@ -69,7 +69,7 @@ spec:
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerBinding
 metadata:
-  name: gitlab-binding
+  name: github-binding
 spec:
   params:
     - name: gitrevision
