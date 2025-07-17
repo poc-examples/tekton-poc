@@ -7,8 +7,6 @@ spec:
     - name: IMAGE_TAG
   workspaces:
     - name: source
-  outputs:
-    
   tasks:
     - name: git-clone
       params:
