@@ -23,7 +23,7 @@ spec:
             value: https://github.com/poc-examples/tekton-poc.git
         podTemplate:
           securityContext:
-            fsGroup: 65532
+            fsGroup: 1000
         workspaces:
         - name: source
           volumeClaimTemplate:
