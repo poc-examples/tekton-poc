@@ -24,7 +24,7 @@ spec:
         podTemplate:
           securityContext:
             runAsUser: 1000
-            fsGroup: 65532
+            fsGroup: 1000
             fsGroupChangePolicy: "OnRootMismatch"
         workspaces:
         - name: source
