@@ -24,7 +24,6 @@ spec:
         podTemplate:
           securityContext:
             fsGroup: 65532
-            fsGroupChangePolicy: "OnRootMismatch"
         workspaces:
         - name: source
           volumeClaimTemplate:
