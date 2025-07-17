@@ -13,7 +13,7 @@ spec:
       metadata: 
         name: generic-build-$(tt.params.gitrevision)
       spec:
-        serviceAccountName: openshift-pipelines
+        serviceAccountName: pipeline
         pipelineRef: 
           name: generic-build-pipeline
         params: 
@@ -21,11 +21,11 @@ spec:
             value: $(tt.params.gitrevision)
           - name: GITHUB_REPO
             value: https://github.com/poc-examples/tekton-poc.git
-        podTemplate:
-          securityContext:
-            runAsUser: 65532
-            fsGroup: 65532
-            fsGroupChangePolicy: "OnRootMismatch"
+        # podTemplate:
+        #   securityContext:
+        #     runAsUser: 65532
+        #     fsGroup: 65532
+        #     fsGroupChangePolicy: "OnRootMismatch"
         workspaces:
         - name: source
           volumeClaimTemplate:

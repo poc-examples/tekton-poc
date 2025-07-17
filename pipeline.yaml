@@ -21,6 +21,8 @@ spec:
           value: 'false'
         - name: NO_PROXY
           value: 'true'
+        - name: DELETE_EXISTING
+          value: "true"
       taskRef:
         resolver: cluster 
         params:
