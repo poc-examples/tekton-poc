@@ -23,6 +23,7 @@ spec:
             value: https://github.com/poc-examples/tekton-poc.git
         podTemplate:
           securityContext:
+            fsGroup: 65532
             fsGroupChangePolicy: "OnRootMismatch"
         workspaces:
         - name: source
