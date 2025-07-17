@@ -1,0 +1,25 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pipeline-image-pusher
+rules:
+  - apiGroups: [""]
+    resources: ["imagestreams", "imagestreams/status", "imagestreamtags"]
+    verbs: ["get", "list", "create", "update", "patch"]
+  - apiGroups: [""]
+    resources: ["pods", "pods/log"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pipeline-image-pusher-binding
+subjects:
+  - kind: ServiceAccount
+    name: openshift-pipelines
+    namespace: tekton-test
+roleRef:
+  kind: ClusterRole
+  name: pipeline-image-pusher
+  apiGroup: rbac.authorization.k8s.io
