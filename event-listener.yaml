@@ -59,7 +59,8 @@ spec:
             - key: truncated_sha
               expression: "body.after.truncate(7)"
       bindings:
-        - name: gitrevision
+        - kind: TriggerBinding
+          name: gitrevision
           value: $(extensions.truncated_sha)
       template:
         ref: generic-pipeline-trigger-template
