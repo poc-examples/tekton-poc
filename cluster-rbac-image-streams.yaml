@@ -4,7 +4,7 @@ kind: ClusterRole
 metadata:
   name: pipeline-image-pusher
 rules:
-  - apiGroups: [""]
+  - apiGroups: ["config.openshift.io"]
     resources: ["imagestreams", "imagestreams/status", "imagestreamtags", "images"]
     verbs: ["get", "list", "create", "update", "patch"]
   - apiGroups: [""]
