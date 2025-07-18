@@ -5,7 +5,7 @@ metadata:
   name: pipeline-image-pusher
 rules:
   - apiGroups: [""]
-    resources: ["imagestreams", "imagestreams/status", "imagestreamtags"]
+    resources: ["imagestreams", "imagestreams/status", "imagestreamtags", "images"]
     verbs: ["get", "list", "create", "update", "patch"]
   - apiGroups: [""]
     resources: ["pods", "pods/log"]
