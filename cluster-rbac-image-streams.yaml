@@ -5,7 +5,15 @@ metadata:
   name: pipeline-image-pusher
 rules:
   - apiGroups: ["image.openshift.io"]
-    resources: ["imagestreams", "imagestreams/status", "imagestreamtags", "images"]
+    resources: [
+      "imagestreams", 
+      "imagestreams/status", 
+      "imagestreamtags", 
+      "images", 
+      "imagestreamimages",
+      "imagestreammappings",
+      "imagetags"
+    ]
     verbs: ["get", "list", "create", "update", "patch"]
   - apiGroups: [""]
     resources: ["pods", "pods/log"]
