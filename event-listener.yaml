@@ -13,6 +13,8 @@ spec:
       metadata: 
         name: generic-build-$(tt.params.gitrevision)
       spec:
+        taskRunTemplate:
+          serviceAccountName: pipeline
         serviceAccountName: pipeline
         pipelineRef: 
           name: generic-build-pipeline
