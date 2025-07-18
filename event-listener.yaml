@@ -20,7 +20,7 @@ spec:
           - name: IMAGE_TAG
             value: $(tt.params.gitrevision)
           - name: GITHUB_REPO
-            value: https://github.com/poc-examples/tekton-poc.git
+            value: https://github.com/poc-examples/test-java-container.git
         # podTemplate:
         #   securityContext:
         #     runAsUser: 65532
