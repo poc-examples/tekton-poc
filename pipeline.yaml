@@ -57,7 +57,7 @@ spec:
     - name: build
       params:
         - name: IMAGE
-          value: 'image-registry.openshift-image-registry.svc:5000/tekton-test/test-image:$(params.IMAGE_TAG)'
+          value: 'image-registry.openshift-image-registry.svc:5000/test-image/test-image:$(params.IMAGE_TAG)'
         - name: STORAGE_DRIVER
           value: vfs
         - name: DOCKERFILE
