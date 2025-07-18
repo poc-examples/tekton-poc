@@ -17,7 +17,7 @@ metadata:
   name: pipeline-image-pusher-binding
 subjects:
   - kind: ServiceAccount
-    name: openshift-pipelines
+    name: pipeline
     namespace: tekton-test
 roleRef:
   kind: ClusterRole
